@@ -1,7 +1,7 @@
 # Install
 
 - Create virtual environment with `python -m venv .venv`.
-- Change into virtual environment with `source ./venv/bin/activate`.
+- Change into virtual environment with `source .venv/bin/activate`.
 - Install required packages with `pip install -r requirements.txt`.
 
 # Run
