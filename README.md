@@ -9,3 +9,9 @@
 - Change directory with `cd exercise_project`.
 - Run the Django server with `python manage.py runserver 8123`.
 - Open the application in the browser at `http://127.0.0.1:8123`.
+
+# Admin
+
+- Go to `http://127.0.0.1:8123/admin`.
+- Username is `username`.
+- Password is `password`.
