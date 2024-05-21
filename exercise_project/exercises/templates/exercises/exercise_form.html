@@ -1,0 +1,33 @@
+{% extends "exercises/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="text-start">
+    <a href="https://katex.org/">See KaTeX documentation</a>
+    <div class="row">
+        <div class="col">
+            <form method="POST">
+                {% csrf_token %}
+
+                {% for field in form %}
+                <div class="form-group">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}:</label>
+                </div>
+                {{ field }}
+                {% endfor %}
+                <div>
+                    <button class="btn btn-outline-info text-start" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="col">
+            <h1 class="title" id="exercise_title"></h1>
+            <div id="demo-output"></div>
+            <h1>Solution</h1>
+            <div id="demo-output2"></div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

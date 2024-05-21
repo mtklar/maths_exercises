@@ -1,0 +1,31 @@
+{% extends "exercises/base.html" %}
+{% block content %}
+
+
+<div class="flex-container">
+    <div class="flex-item col-lg-6">
+        <h1 class="title">{{ object.title }}</h1>
+        <h1>Tags</h1>
+        {% for tag in object.tags.all %}
+        <li>{{ tag.title }}</li>
+        {% empty %}
+        <li>No tags available for this exercise.</li>
+        {% endfor %}
+
+        <h1>Exercise</h1>
+        <div id="demo-output">{{ object.text|safe }}</div>
+        <h1>Solution</h1>
+        <div id="demo-output2">{{ object.solution|safe }}</div>
+        {% if object.note %}
+        <h1>Note</h1>
+        <p>{{ object.note }}</p>
+        {% endif %}
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'exercise-update' object.id %}">Update</a>
+    <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'exercise-delete' object.id %}">Delete</a>
+</div>
+
+{% endblock %}

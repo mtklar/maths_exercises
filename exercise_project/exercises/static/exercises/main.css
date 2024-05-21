@@ -1,0 +1,86 @@
+.positive-num {
+  background-color: green;
+  color: white;
+}
+
+.negative-num {
+  background-color: red;
+  color: white;
+}
+
+tr td.positive-num {
+  background-color: green;
+  color: white;
+}
+
+tr td.negative-num {
+  background-color: red;
+  color: white;
+}
+
+tr td.triggered {
+  background-color: green;
+  color: white;
+}
+
+.autocomplete-items {
+  /* position: relative; */
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center; /* To vertically align the items in the container */
+}
+
+.flex-item {
+  margin: 10px; /* Add some margin between text and image */
+}
+
+#id_title {
+  width: 90%;
+}
+
+#id_text {
+  width: 90%;
+  height: auto;
+}
+
+#id_solution {
+  width: 90%;
+  height: auto;
+}
+
+#id_note {
+  width: 90%;
+  height: auto;
+}
+
+#exercise_title {
+  margin-top: 30px;
+}

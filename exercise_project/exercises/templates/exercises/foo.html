@@ -1,0 +1,112 @@
+<ol type="a">
+    <li>
+        Sei \(M_a:=\{(x,y)\in{\mathbb R}^2\,:\, x\ge 0,\, y\ge0,\, x+y\le 1 \}\). $\newline$
+
+        Anschaulich ist \(M_a\) die Menge der Punkte auf dem Dreieck bzw. innerhalb des Dreiecks mit den Eckpunkten
+        \(P_1:=(0,0)\), \(P_2:=(1,0)\) und \(P_3:=(0,1)\). $\newline$
+
+        Wir zeigen zunächst: Die Menge \(M_a\) ist abgeschlossen. $\newline$
+
+        $\textit{Begründung:}$ Sei \(((x_j,y_j))_{j\in{\mathbb N}}\) eine Folge mit \((x_j,y_j)\in M_a\) für alle
+        \(j\in{\mathbb N}\), die gegen
+        \((x,y)\in{\mathbb R}^2\) konvergiert. $\newline$
+
+        Zu zeigen ist: \((x,y)\in M_a\). Da aber \(x_j\geq0\), \(y_j\geq0\) und \(x_j+y_j\leq 1\) für alle
+        \(j\in{\mathbb N}\) gilt, folgt \(x\geq0\), \(y\geq0\) und \(x+y\leq1\), also \((x,y)\in M_a\). $\newline$
+
+        \(M_a\) ist nicht offen, denn es gibt z.B. zu \((0,0)\in M_a\) kein \(\varepsilon>0\) mit
+        \(B((0,0),\varepsilon)\subset M_a\). $\newline$
+
+        Da \(M_a\) abgeschlossen ist, gilt {\bf Satz 2.12} \(\overline{M_a}=M_a\). $\newline$
+
+        Sei \(D:=\{(x,y)\in{\mathbb R}^2\,|\, x> 0,\, y>0,\, x+y< 1 \}\). Wir zeigen nun \(\text{int}\, (M_a)=D\).
+            $\newline$ Zuerst zeigen wir \(D\subset\text{int}\, (M_a)\): Sei \((x_0,y_0)\in D\). Da die Funktionen
+            \((x,y)\mapsto x\), \((x,y)\mapsto y\), \((x,y)\mapsto x+y\) stetig sind und die Urbilder offener Mengen
+            unter stetigen Abbildungen offen sind, gibt es \(\varepsilon_1>0\), \(\varepsilon_2>0\),
+            \(\varepsilon_3>0\), sodass
+            für \((x,y)\in B((x_0,y_0),\varepsilon_1)\) gilt \(x>0\), für \((x,y)\in B((x_0,y_0),\varepsilon_2)\) gilt
+            \(y>0\) und
+            für \((x,y)\in B((x_0,y_0),\varepsilon_3)\) gilt \(x+y<1\). Ist also
+                \(\varepsilon=\min\{\varepsilon_1,\varepsilon_2,\varepsilon_3\}\), so folgt
+                \(B((x_0,y_0),\varepsilon)\subset D\). Die Menge \(D\) ist also offen. Für \((x_0,y_0)\in M_a\backslash
+                D\) gilt \(x_0=0\) oder \(y_0=0\) oder \(x_0+y_0=1\). In diesem Fall gibt es kein \(\varepsilon>0\) mit
+                \(B((x_0,y_0),\varepsilon)\subset M_a\).
+                Damit ist gezeigt: \(\text{int}\, (M_a)=D\). $\newline$
+
+                Damit folgt schließlich:
+                \begin{equation*}
+                \partial M_a=\overline{M_a}\backslash\text{
+                int}\,(M_a)=\{(0,y)\,|\,y\in[0,1]\}\cup\{(x,0)\,|\,x\in[0,1]\}\cup\{(x,y)\,|\,x\in[0,1]\,,\,y=1-x\}\,.
+                \end{equation*}
+    </li>
+    <li>
+        Sei \(M_b=\{(x,y)\in{\mathbb R}^2\,:\, 1< d_2(x,y)\le 2\}\). Hier ist \begin{equation*} d_2(x,y)=|x-y|
+            \end{equation*} der euklidische Abstand der beiden reellen Zahlen \(x\) und \(y\). $\newline$
+            $\textit{Bemerkung}:$ Anschaulich ist die Menge \(M_b\) die Vereinigung zweier "`Streifen"'. Liest man dagegen \(d_2(x,y)\) als euklidische Norm
+                      von \((x,y)\), also präziser als
+                      \begin{equation*}
+                          d_2((x,y),(0,0))=\|(x,y)\|_2\,,
+                      \end{equation*}
+                      dann erhält man eine andere Teilmenge von \(\R^2\), nämlich einen Kreisring. Es ergeben sich  also unterschiedliche Teilmengen von \(\R^2\), je nach Interpretation.
+                      Interessanterweise sehen die Ergebnisse aber bei beiden Interpretationen formelmäßig gleich aus. $\newline$
+
+Da \((x_j,y_j)=(0,1+\frac{1}{j})\in M_b\) für alle \(j\in{\mathbb N}_{>0}\), aber \(\lim_{j\rightarrow\infty}(x_j,y_j)=(0,1)\notin M_b\), ist \(M_b\) nicht abgeschlossen. $\newline$
+
+Für \((0,2)\in M_b\) gibt es kein \(\varepsilon>0\) mit \(B((0,2),\varepsilon)\subset M_b\). Also ist \(M_b\) nicht offen. $\newline$
+
+\(M_b\) ist also weder offen noch abgeschlossen. $\newline$
+
+Sei \(A=\{(x,y)\in{\mathbb R}^2\,|\, 1\leq d_2(x,y)\le 2\}\). Wir zeigen \(\overline{M_b}=A\). $\newline$
+
+Ist \((x,y)\in \overline{M_b}\), so gibt es eine Folge \(((x_j,y_j))_{j\in{\mathbb N}}\) mit \((x_j,y_j)\in M_b\) für alle \(j\in{\mathbb N}\), die gegen \((x,y)\) konvergiert. Es gilt also  \(1<d_2(x_j,y_j)\le 2\) für alle \(j\in{\mathbb N}\). Also  folgt \(1\le d_2(x,y)\le 2\), d.h.  \((x,y)\in A\). $\newline$
+
+Ist umgekehrt \((x,y)\in A\), so gilt (Fall 1) \((x,y)\in M_b\) und damit \((x,y)\in \overline{M_b}\) oder (Fall 2) \(d_2(x,y)=1\). Falls \(y=x+1\), so gilt \((x,y)=\lim_{j\rightarrow\infty}(x_j,y_j)\), wobei \((x_j,y_j):=(x,x+(1+\frac{1}{j}))\in M_b\) für alle \(j\in{\mathbb N}_{>0}\). Also ist \((x,y)\in\overline{M_b}\). Falls \(y=x-1\), so gilt \((x,y)=\lim_{j\rightarrow\infty}(x_j,y_j)\), wobei \((x_j,y_j):=(x,x-(1+\frac{1}{j}))\in M_b\) für alle \(j\in{\mathbb N}_{>0}\). Also ist auch in diesem Fall \((x,y)\in\overline{M_b}\). $\newline$
+
+Sei \(E=\{(x,y)\in{\mathbb R}^2\,|\, 1<d_2(x,y)< 2\}\). Wir zeigen \(\text{int}\, (M_b)=E\). Die Menge \(E\) ist offen als Urbild der offenen Menge \((1,2)\) unter der stetigen Abbildung \(f:{\mathbb R}^2\rightarrow{\mathbb R}\), \(f(x,y):=|x-y|\). Also gilt  \(E\subset \text{int}\, (M_b)\). Ist \((x,y)\in M_b\backslash E\), so gibt es kein \(\varepsilon>0\) mit \(B((x,y),\varepsilon)\in M_b\). Damit ist gezeigt: \(\text{int}\, (M_b)=E\). $\newline$
+
+Damit folgt schließlich
+                  \begin{equation*}
+                      \partial M_b=\{(x,y)\in \R^2\,|\,d_2(x,y)=1\}\cup \{(x,y)\in \R^2\,|\,d_2(x,y)=2\}\,.
+                  \end{equation*}
+</li>
+
+<li>
+Sei \(M_c=\{(x,y)\in{\mathbb R}^2\,|\, x\neq 0\}\). \(M_c\) ist offen als Urbild der offenen Menge \((-\infty,0)\cup(0,\infty)\) unter der stetigen Abbildung \((x,y)\mapsto x\). $\newline$
+
+Es gilt \(\overline{M_c}={\mathbb R}^2\). Begründung: Da \(M_c\subset\overline{M_c}\), ist nur zu zeigen, dass \((0,y)\in\overline{M_c}\) für \(y\in{\mathbb R}\). Es gilt aber \(\left(\frac{1}{j},y\right)\in M_c\) für \(j\in{\mathbb N}_{>0}\) und \(\lim_{j\rightarrow\infty}\left(\frac{1}{j},y\right)=(0,y)\). $\newline$
+
+Da \(M_c\) offen ist, gilt \(\text{int}\,M_c=M_c\). $\newline$
+
+Damit folgt schließlich
+
+                  \(\partial M_c=\{0\}\times{\mathbb R}\).
+</li>
+
+<li>
+
+Sei \(M_d=\{(x,y)\in{\mathbb R}^2\,|\,y\in{\mathbb Q}\}\).  Da jede reelle Zahl Grenzwert einer Folge von rationalen Zahlen ist, folgt \(\overline{M_d}={\mathbb R}^2\). Da \((0,\sqrt{2})\notin M_d\), gilt \(M_d\neq\overline{M_d}\). Also ist \(M_d\) nicht abgeschlossen. $\newline$
+
+\({\mathbb R}^2\backslash M_d\) ist ebenfalls nicht abgeschlossen, denn es gilt \(\left(0,\frac{\sqrt{2}}{j}\right)\in{\mathbb R}^2\backslash M_d\) für alle \(j\in{\mathbb N}_{>0}\), aber \(\lim_{j\rightarrow\infty}\left(0,\frac{\sqrt{2}}{j}\right)=(0,0)\notin{\mathbb R}^2\backslash M_d\). Da \({\mathbb R}^2\backslash M_d\) nicht abgeschlossen ist, ist \(M_d\) nicht offen. $\newline$
+
+Also ist \(M_d\) weder offen noch abgeschlossen und es gilt  \(\overline{M_d}={\mathbb R}^2\). $\newline$
+
+Ist \((x,y)\in M_d\), so gilt \((x,y)=\lim_{j\rightarrow\infty}\left(x,y+\frac{\sqrt{2}}{j}\right)\) mit \(\left(x,y+\frac{\sqrt{2}}{j}\right)\in{\mathbb R}^2\backslash M_d\) für alle \(j\in{\mathbb N}_{>0}\). Es gibt also kein \(\varepsilon>0\) mit \(B((x,y),\varepsilon)\in M_d\). Es gilt also \(\text{int}\,(M_d)=\emptyset\). $\newline$
+
+Damit folgt schließlich
+
+                  \(\partial M_d=\overline{M_d}\backslash\text{int}\,(M_d)={\mathbb R}^2\).
+</li>
+
+<li>
+Sei \(M_e=\{(x,y)\in{\mathbb R}^{k+m}\,|\,x\in U\, \text{und}\,y\in V\}\), wobei \(U\) eine offene Teilmenge von \({\mathbb R}^k\) und \(V\) eine offene Teilmenge von \({\mathbb R}^m\) sei. $\newline$
+
+Wir zeigen zunächst: \(M_e\) ist offen. $\newline$
+
+$\textit{Begründung:}$ Sei \((x_0,y_0)\in M_e\). Da die  Abbildungen \((x,y)\mapsto x\) und \((x,y)\mapsto y\) stetig sind, sind die Mengen \(U\times{\mathbb R}^m\) und \({\mathbb R}^k\times V\) als Urbilder der offenen Mengen \(U\) bzw \(V\) offen. Es gibt also \(\varepsilon_1>0\) mit \(B((x_0,y_0),\varepsilon_1)\subset U\times{\mathbb R}^m\) und \(\varepsilon_2>0\) mit \(B((x_0,y_0),\varepsilon_2)\subset {\mathbb R}^k\times V\). Für \(\varepsilon=\min\{\varepsilon_1,\varepsilon_2\}\) gilt also \(B((x_0,y_0),\varepsilon)\subset U\times V\). Also ist \(M_e=U\times V\) offen. Insbesondere gilt \(\text{int}\,(U\times V)=U\times V\). Da Konvergenz im \(R^{k+m}\) gleichbedeutend ist mit Konvergenz in jeder Komponente, folgt \(\overline{U\times V}=\overline{U}\times\overline{V}\). Damit folgt
+                  \begin{equation*}
+                      \partial(U\times V)=\overline{(U\times V)}\backslash(\text{int }\,(U\times V))=\overline{U}\times\overline{V}\backslash(U\times V)
+                      =(\partial U\times\overline{V})\cup(\overline{U}\times\partial V).
+                  \end{equation*}
+</li>
+
+</ol>
